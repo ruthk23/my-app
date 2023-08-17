@@ -1,8 +1,8 @@
 const functions = require ("firebase-functions");
 const express = require("express");
 const cors = require("cors");
-const stripe = require("stripe"): 
-    (sk_test_51Nd2LAJ1zAigl3fQ6vD5OzwWHpRgIQ46kTWEZMPp0WFlj4lyTEuGV05QLIIM1i00GVZnFQ49408S6UZteYEjm44U00xA5AWW3X)
+const stripe = require("stripe")
+    // (sk_test_51Nd2LAJ1zAigl3fQ6vD5OzwWHpRgIQ46kTWEZMPp0WFlj4lyTEuGV05QLIIM1i00GVZnFQ49408S6UZteYEjm44U00xA5AWW3X)
 
 const app = express();
 app.use(cors({origin: true}));
@@ -27,3 +27,8 @@ const paymentIntent = await stripe.paymentIntents.create({
 
 exports.api = functions.https.onRequest(app);
 //http://127.0.0.1:5001/fir-3498b/us-central1/api
+
+
+
+
+

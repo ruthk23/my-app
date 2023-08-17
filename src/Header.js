@@ -4,17 +4,17 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./Stateprovider";
-// import { auth } from "./firebase";
-//   import firebase from "firebase/compat/app";
-// 	import "firebase/compat/auth";
-// 	import "firebase/compat/firestore";
+import { auth } from "./firebase";
+  import firebase from "firebase/compat/app";
+	import "firebase/compat/auth";
+	import "firebase/compat/firestore";
 
 function Header() {
 	const [{ basket, user }, dispatch] = useStateValue();
 
 	const handleAuthenticaton = () => {
 		if (user) {
-			// auth.signOut();
+			auth.signOut();
 		}
 	};
 	return (
